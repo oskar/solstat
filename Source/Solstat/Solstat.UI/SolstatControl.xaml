@@ -1,0 +1,8 @@
+﻿<UserControl x:Class="Solstat.UI.SolstatControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit">
+  <Grid>
+    <xctk:Pie Width="100" Height="100" Mode="Slice" Slice="0.4" />
+  </Grid>
+</UserControl>
