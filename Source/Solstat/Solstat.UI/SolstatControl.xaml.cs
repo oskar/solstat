@@ -1,17 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Linq;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
+using Microsoft.Win32;
+using Solstat.Library;
 
 namespace Solstat.UI
 {
@@ -23,6 +14,23 @@ namespace Solstat.UI
     public SolstatControl()
     {
       InitializeComponent();
+    }
+
+    private void ButtonBase_OnClick(object sender, RoutedEventArgs e)
+    {
+      var dialog = new OpenFileDialog();
+      dialog.DefaultExt = ".sln";
+      if (dialog.ShowDialog().GetValueOrDefault())
+      {
+        var path = dialog.FileName;
+        var parser = new SolutionParser(path);
+        var projects = parser.Parse();
+
+        var warnAsError = projects.Count(p => p.WarnAsError);
+        //var notWarnAsError = projects.Count - warnAsError;
+
+        pieWarnAsError.Slice = warnAsError / projects.Count;
+      }
     }
   }
 }

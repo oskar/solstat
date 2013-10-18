@@ -9,6 +9,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Solstat.Tests", "Solstat.Te
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Solstat.VSExtension", "Solstat.VSExtension\Solstat.VSExtension.csproj", "{E85DF5E2-833C-421A-89BA-C988C532FB90}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Solstat.UI", "Solstat.UI\Solstat.UI.csproj", "{31ED831C-5B3E-40D2-A9DC-7B2FB145C0C9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Solstat.WindowsClient", "Solstat.WindowsClient\Solstat.WindowsClient.csproj", "{38838D13-18BC-4D92-8FE8-88422D9AF383}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -31,6 +35,14 @@ Global
 		{E85DF5E2-833C-421A-89BA-C988C532FB90}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E85DF5E2-833C-421A-89BA-C988C532FB90}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E85DF5E2-833C-421A-89BA-C988C532FB90}.Release|Any CPU.Build.0 = Release|Any CPU
+		{31ED831C-5B3E-40D2-A9DC-7B2FB145C0C9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{31ED831C-5B3E-40D2-A9DC-7B2FB145C0C9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{31ED831C-5B3E-40D2-A9DC-7B2FB145C0C9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{31ED831C-5B3E-40D2-A9DC-7B2FB145C0C9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{38838D13-18BC-4D92-8FE8-88422D9AF383}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{38838D13-18BC-4D92-8FE8-88422D9AF383}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{38838D13-18BC-4D92-8FE8-88422D9AF383}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{38838D13-18BC-4D92-8FE8-88422D9AF383}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
