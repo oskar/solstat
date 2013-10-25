@@ -29,7 +29,7 @@ namespace Solstat.UI
         var warnAsError = projects.Count(p => p.WarnAsError);
         //var notWarnAsError = projects.Count - warnAsError;
 
-        pieWarnAsError.Slice = warnAsError / projects.Count;
+        pieWarnAsError.Slice = (double)warnAsError / projects.Count;
       }
     }
   }
