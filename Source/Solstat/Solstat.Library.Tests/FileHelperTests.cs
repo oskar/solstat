@@ -5,7 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace Solstat.Tests
+namespace Solstat.Library.Tests
 {
     [TestClass]
     public class FileHelperTests

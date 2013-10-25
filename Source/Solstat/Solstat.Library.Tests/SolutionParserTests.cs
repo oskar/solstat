@@ -4,7 +4,7 @@ using Solstat.Library;
 using System.Diagnostics;
 using System.IO;
 
-namespace Solstat.Tests
+namespace Solstat.Library.Tests
 {
     [TestClass]
     public class SolutionParserTests

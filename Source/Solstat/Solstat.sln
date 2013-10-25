@@ -5,7 +5,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Solstat.ConsoleClient", "So
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Solstat.Library", "Solstat.Library\Solstat.Library.csproj", "{B8958DAF-17A7-41EF-8F5B-98DC3EB8DA84}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Solstat.Tests", "Solstat.Tests\Solstat.Tests.csproj", "{EBC65077-1D5D-4759-A987-D14E2AC99BE5}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Solstat.Library.Tests", "Solstat.Library.Tests\Solstat.Library.Tests.csproj", "{EBC65077-1D5D-4759-A987-D14E2AC99BE5}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Solstat.VSExtension", "Solstat.VSExtension\Solstat.VSExtension.csproj", "{E85DF5E2-833C-421A-89BA-C988C532FB90}"
 EndProject
