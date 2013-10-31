@@ -1,19 +1,19 @@
 ﻿using System;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+using NUnit.Framework;
 
 namespace Solstat.Library.Tests
 {
-  [TestClass]
-  public class FileHelperTests
+  [TestFixture]
+  public class FileHelperFixture
   {
-    [TestMethod]
-    public void ShouldReturnNothingForInvalidDirectory()
+    [Test]
+    public void Should_return_nothing_for_invalid_directory()
     {
       Assert.IsTrue(string.IsNullOrEmpty(FileHelper.FindSolutionFile("this-directory-does-not-exist")));
     }
 
-    [TestMethod]
-    public void ShouldFindSolutionFileStartingInCurrentDirectory()
+    [Test]
+    public void Should_find_solution_file_starting_in_current_directory()
     {
       Assert.IsFalse(string.IsNullOrEmpty(FileHelper.FindSolutionFile(Environment.CurrentDirectory)));
     }

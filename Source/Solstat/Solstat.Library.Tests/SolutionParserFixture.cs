@@ -6,7 +6,7 @@ using NUnit.Framework;
 namespace Solstat.Library.Tests
 {
   [TestFixture]
-  public class SolutionParserTests
+  public class SolutionParserFixture
   {
     private readonly string solutionFile_ = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Data",
                                                          "SolstatTestData.sln");

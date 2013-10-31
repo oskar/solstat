@@ -56,8 +56,8 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
-    <Compile Include="FileHelperTests.cs" />
-    <Compile Include="SolutionParserTests.cs" />
+    <Compile Include="FileHelperFixture.cs" />
+    <Compile Include="SolutionParserFixture.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
