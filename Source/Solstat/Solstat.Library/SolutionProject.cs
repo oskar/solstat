@@ -54,14 +54,4 @@ namespace Solstat.Library
       return base.ToString();
     }
   }
-
-  public enum SolutionProjectType
-  {
-    Unknown,
-    KnownToBeMSBuildFormat,
-    SolutionFolder,
-    WebProject,
-    WebDeploymentProject,
-    EtpSubProject
-  }
 }

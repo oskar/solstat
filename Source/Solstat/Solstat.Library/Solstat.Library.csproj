@@ -63,10 +63,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Entities\Category.cs" />
+    <Compile Include="Entities\CategoryValue.cs" />
+    <Compile Include="Entities\OutputType.cs" />
+    <Compile Include="Entities\Project.cs" />
+    <Compile Include="Entities\SolutionProjectType.cs" />
+    <Compile Include="Entities\SolutionStatistics.cs" />
+    <Compile Include="Entities\TargetFramework.cs" />
     <Compile Include="FileHelper.cs" />
+    <Compile Include="ProjectParser.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SolutionParser.cs" />
     <Compile Include="SolutionProject.cs" />
+    <Compile Include="StatisticsGenerator.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

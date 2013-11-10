@@ -67,5 +67,10 @@ namespace Solstat.Library
 
       return projects;
     }
+
+    public List<Project> ParseRealProjects()
+    {
+      throw new NotImplementedException();
+    }
   }
 }
