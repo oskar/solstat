@@ -76,5 +76,10 @@ namespace Solstat.Library
       Console.WriteLine(workspace.CurrentSolution.HasProjects); // false
       Console.WriteLine(workspace.CurrentSolution.Projects.Count()); // 0
     }
+    
+    public List<Project> ParseRealProjects()
+    {
+      throw new NotImplementedException();
+    }
   }
 }

@@ -59,6 +59,7 @@
     <Compile Include="FileHelperFixture.cs" />
     <Compile Include="SolutionParserFixture.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="StatisticsGeneratorFixture.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Solstat.Library\Solstat.Library.csproj">
