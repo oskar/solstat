@@ -34,13 +34,13 @@ namespace Solstat.Library
 
     public SolutionProject(object solutionProject)
     {
-      this.ProjectName = s_ProjectInSolution_ProjectName.GetValue(solutionProject, null) as string;
-      this.RelativePath = s_ProjectInSolution_RelativePath.GetValue(solutionProject, null) as string;
-      this.ProjectGuid = s_ProjectInSolution_ProjectGuid.GetValue(solutionProject, null) as string;
+      ProjectName = s_ProjectInSolution_ProjectName.GetValue(solutionProject, null) as string;
+      RelativePath = s_ProjectInSolution_RelativePath.GetValue(solutionProject, null) as string;
+      ProjectGuid = s_ProjectInSolution_ProjectGuid.GetValue(solutionProject, null) as string;
 
       if (s_ProjectInSolution_ProjectType != null)
       {
-        this.ProjectType = (SolutionProjectType)Enum.Parse(typeof(SolutionProjectType), (s_ProjectInSolution_ProjectType.GetValue(solutionProject, null) ?? "").ToString());
+        ProjectType = (SolutionProjectType)Enum.Parse(typeof(SolutionProjectType), (s_ProjectInSolution_ProjectType.GetValue(solutionProject, null) ?? "").ToString());
       }
     }
 

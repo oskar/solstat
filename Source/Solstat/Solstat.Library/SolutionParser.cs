@@ -67,5 +67,14 @@ namespace Solstat.Library
 
       return projects;
     }
+
+    public void ParseWithRoslyn()
+    {
+      var workspace = Roslyn.Services.Workspace.LoadSolution(_solutionFileName);
+      
+      //var solution = Roslyn.Services.Solution.Load(_solutionFileName);
+      Console.WriteLine(workspace.CurrentSolution.HasProjects); // false
+      Console.WriteLine(workspace.CurrentSolution.Projects.Count()); // 0
+    }
   }
 }
