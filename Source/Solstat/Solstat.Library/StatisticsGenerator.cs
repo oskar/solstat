@@ -21,7 +21,7 @@ namespace Solstat.Library
 
       var statistics = new SolutionStatistics();
 
-      CategoryFiller(projects, p => p.TargetFrameworkVersion, statistics.TargetFramework.Values);
+      CategoryFiller(projects, p => p.TargetFrameworkVersion.ToString(), statistics.TargetFramework.Values);
 
       foreach (var p in projects)
         statistics.Projects.Add(p);

@@ -1,7 +1,7 @@
-﻿using System;
+﻿using NUnit.Framework;
+using System;
 using System.IO;
 using System.Linq;
-using NUnit.Framework;
 
 namespace Solstat.Library.Tests
 {
@@ -36,7 +36,7 @@ namespace Solstat.Library.Tests
       Assert.IsNotNull(projects);
 
       var wpfProject = projects.Single(p => p.Name == "WpfApplication1");
-      Assert.That(wpfProject.TargetFrameworkVersion, Is.EqualTo(".NET 4.5"));
+      Assert.That(wpfProject.TargetFrameworkVersion, Is.EqualTo(TargetFrameworkVersion.NetFramework45));
     }
   }
 }

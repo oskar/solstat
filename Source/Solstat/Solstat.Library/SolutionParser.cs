@@ -48,7 +48,7 @@ namespace Solstat.Library
       foreach (var solutionProject in solutionProjects)
       {
         var projectFilePath = Path.Combine(solutionDirectory, solutionProject.RelativePath);
-        var realProject = projectParser.Parse(projectFilePath);
+        var realProject = projectParser.Parse(projectFilePath, solutionProject.ProjectName);
         realProjects.Add(realProject);
       }
 

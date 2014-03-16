@@ -70,7 +70,7 @@
     <Compile Include="Entities\Project.cs" />
     <Compile Include="Entities\SolutionProjectType.cs" />
     <Compile Include="Entities\SolutionStatistics.cs" />
-    <Compile Include="Entities\TargetFramework.cs" />
+    <Compile Include="Entities\TargetFrameworkVersion.cs" />
     <Compile Include="FileHelper.cs" />
     <Compile Include="ProjectParser.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
