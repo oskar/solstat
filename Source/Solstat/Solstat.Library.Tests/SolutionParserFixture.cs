@@ -14,15 +14,16 @@ namespace Solstat.Library.Tests
     [Test]
     public void Should_throw_exception_when_solution_file_argument_is_null_or_empty()
     {
-      Assert.Throws<ArgumentNullException>(() => new SolutionParser(null));
-      Assert.Throws<ArgumentNullException>(() => new SolutionParser(""));
+      var parser = new SolutionParser();
+      Assert.Throws<ArgumentNullException>(() => parser.Parse(null));
+      Assert.Throws<ArgumentNullException>(() => parser.Parse(""));
     }
 
     [Test]
     public void Should_contain_three_projects()
     {
-      var parser = new SolutionParser(solutionFile_);
-      var projects = parser.Parse();
+      var parser = new SolutionParser();
+      var projects = parser.Parse(solutionFile_);
       Assert.IsNotNull(projects);
       Assert.That(projects.Count, Is.EqualTo(3));
     }
@@ -30,11 +31,11 @@ namespace Solstat.Library.Tests
     [Test]
     public void Should_contain_one_wpf_project()
     {
-      var parser = new SolutionParser(solutionFile_);
-      var projects = parser.Parse();
+      var parser = new SolutionParser();
+      var projects = parser.Parse(solutionFile_);
       Assert.IsNotNull(projects);
 
-      var wpfProject = projects.Single(p => p.ProjectName == "WpfApplication1");
+      var wpfProject = projects.Single(p => p.Name == "WpfApplication1");
       Assert.That(wpfProject.TargetFrameworkVersion, Is.EqualTo(".NET 4.5"));
     }
   }

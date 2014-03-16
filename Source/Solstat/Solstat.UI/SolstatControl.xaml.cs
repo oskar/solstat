@@ -1,8 +1,4 @@
-﻿using System.Linq;
-using System.Windows;
-using System.Windows.Controls;
-using Microsoft.Win32;
-using Solstat.Library;
+﻿using System.Windows.Controls;
 
 namespace Solstat.UI
 {
@@ -16,21 +12,10 @@ namespace Solstat.UI
       InitializeComponent();
     }
 
-    private void ButtonBase_OnClick(object sender, RoutedEventArgs e)
+    public SolstatControlViewModel ViewModel
     {
-      var dialog = new OpenFileDialog();
-      dialog.DefaultExt = ".sln";
-      if (dialog.ShowDialog().GetValueOrDefault())
-      {
-        var path = dialog.FileName;
-        var parser = new SolutionParser(path);
-        var projects = parser.Parse();
-
-        var warnAsError = projects.Count(p => p.WarnAsError);
-        //var notWarnAsError = projects.Count - warnAsError;
-
-        pieWarnAsError.Slice = (double)warnAsError / projects.Count;
-      }
+      get { return (SolstatControlViewModel)DataContext; }
+      set { DataContext = value; }
     }
   }
 }

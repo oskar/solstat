@@ -1,13 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-namespace Solstat.Library
+﻿namespace Solstat.Library
 {
-    public class Project
-    {
-        public string TargetFrameworkVersion { get; set; }
-        public bool WarnAsError { get; set; }
-    }
+  public class Project
+  {
+    public string Name { get; set; }
+    public string Path { get; set; }
+    public string TargetFrameworkVersion { get; set; }
+    public bool WarnAsError { get; set; }
+  }
 }

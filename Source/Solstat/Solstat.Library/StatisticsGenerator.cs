@@ -16,8 +16,8 @@ namespace Solstat.Library
       if (!File.Exists(solutionFilePath))
         throw new ArgumentException(string.Format("File does not exist ({0})", solutionFilePath));
 
-      var parser = new SolutionParser(solutionFilePath);
-      var projects = parser.ParseRealProjects();
+      var parser = new SolutionParser();
+      var projects = parser.Parse(solutionFilePath);
 
       var statistics = new SolutionStatistics();
 

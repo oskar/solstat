@@ -11,5 +11,10 @@ namespace Solstat.WindowsClient
     {
       InitializeComponent();
     }
+
+    private void SolstatControl_Loaded(object sender, RoutedEventArgs e)
+    {
+      SolstatControl.ViewModel = new UI.SolstatControlViewModel();
+    }
   }
 }

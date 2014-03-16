@@ -1,9 +1,36 @@
 ﻿<UserControl x:Class="Solstat.UI.SolstatControl"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit">
-  <Grid>
-    <Button Click="ButtonBase_OnClick">Browse solution file</Button>
-    <xctk:Pie Name="pieWarnAsError" Width="100" Height="100" Mode="Slice" Slice="0.4" Fill="Gray" />
-  </Grid>
+             xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
+             xmlns:local="clr-namespace:Solstat.UI"
+             Margin="10">
+    <UserControl.Resources>
+        <local:FractionToPercentageConverter x:Key="ToPercentageConv" />
+    </UserControl.Resources>
+    <DockPanel>
+        <StackPanel Margin="0, 0, 0, 10" DockPanel.Dock="Top" Orientation="Horizontal" HorizontalAlignment="Right">
+            <Button Command="{Binding OpenSolutionFileCommand}">Open solution file</Button>
+        </StackPanel>
+        
+        <StackPanel>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="Auto" />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition />
+                    <RowDefinition />
+                </Grid.RowDefinitions>
+                
+                <TextBlock Grid.Row="0" Grid.Column="0" Text="Number of projects: " />
+                <TextBlock Grid.Row="0" Grid.Column="1" Text="{Binding NumberOfProjects}" />
+                
+                <TextBlock Grid.Row="1" Grid.Column="0" Text="Treat warnings as errors: " />
+                <TextBlock Grid.Row="1" Grid.Column="1" Text="{Binding TreatWarningsAsErrors, Converter={StaticResource ToPercentageConv}}" />
+                <xctk:Pie Grid.Row="1" Grid.Column="2" Width="20" Height="20" Mode="Slice" Slice="{Binding TreatWarningsAsErrors}" Fill="Gray" StartAngle="-90" />
+            </Grid>
+        </StackPanel>
+    </DockPanel>
 </UserControl>

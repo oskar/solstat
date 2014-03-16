@@ -29,8 +29,6 @@ namespace Solstat.Library
     public string RelativePath { get; private set; }
     public string ProjectGuid { get; private set; }
     public SolutionProjectType ProjectType { get; private set; }
-    public string TargetFrameworkVersion { get; set; }
-    public bool WarnAsError { get; set; }
 
     public SolutionProject(object solutionProject)
     {
